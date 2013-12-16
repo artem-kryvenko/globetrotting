@@ -6330,6 +6330,7 @@ button.close {
   position: relative;
 }
 
+
 .carousel-inner {
   position: relative;
   width: 100%;
@@ -6349,6 +6350,7 @@ button.close {
   height: auto;
   max-width: 100%;
   line-height: 1;
+  margin: 0 auto;
 }
 
 .carousel-inner > .active,
