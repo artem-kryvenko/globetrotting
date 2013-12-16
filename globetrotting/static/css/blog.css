@@ -1,5 +1,17 @@
-.container-fluid{margin-top: 5em}
-.debug-red{background: red}
-.debug-blue{background: blue}
+html {
+  background: url('/globetrotting/static/images/midnight.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
-table.oneline td {line-height: 30px;}
+body {
+    max-width: 65%;
+    margin: 0 auto;
+   }
+
+.container-fluid{margin-top: 5em}
+
+
+
