@@ -11,10 +11,10 @@ def home(request):
 def post_detail(request, post_id):
 	post = Post.objects.get(id=post_id)
 	data = {'post': post}
-	return render(request, 'blog/post_details.html', data)
+	return render(request, 'blog/post_detail.html', data)
 
 
 def archive(request):
 	posts = Post.objects.filter(published=True)
 	data = {'posts': posts}
-	return render(request, 'blog/posts_archive.html', data)
+	return render(request, 'blog/archive.html', data)
