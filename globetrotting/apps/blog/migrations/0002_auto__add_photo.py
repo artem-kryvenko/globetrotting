@@ -8,25 +8,31 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Adding model 'Post'
-        db.create_table(u'blog_post', (
+        # Adding model 'Photo'
+        db.create_table(u'blog_photo', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('title', self.gf('django.db.models.fields.CharField')(max_length=255)),
-            ('slug', self.gf('django.db.models.fields.SlugField')(unique=True, max_length=255)),
-            ('description', self.gf('django.db.models.fields.CharField')(max_length=255)),
-            ('content', self.gf('django.db.models.fields.TextField')()),
-            ('created', self.gf('django.db.models.fields.DateField')(auto_now_add=True, blank=True)),
-            ('published', self.gf('django.db.models.fields.BooleanField')(default=True)),
+            ('post', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['blog.Post'])),
+            ('image', self.gf('django.db.models.fields.files.ImageField')(max_length=100)),
+            ('title', self.gf('django.db.models.fields.CharField')(max_length=100, blank=True)),
+            ('caption', self.gf('django.db.models.fields.CharField')(max_length=100, blank=True)),
         ))
-        db.send_create_signal(u'blog', ['Post'])
+        db.send_create_signal(u'blog', ['Photo'])
 
 
     def backwards(self, orm):
-        # Deleting model 'Post'
-        db.delete_table(u'blog_post')
+        # Deleting model 'Photo'
+        db.delete_table(u'blog_photo')
 
 
     models = {
+        u'blog.photo': {
+            'Meta': {'object_name': 'Photo'},
+            'caption': ('django.db.models.fields.CharField', [], {'max_length': '100', 'blank': 'True'}),
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'image': ('django.db.models.fields.files.ImageField', [], {'max_length': '100'}),
+            'post': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['blog.Post']"}),
+            'title': ('django.db.models.fields.CharField', [], {'max_length': '100', 'blank': 'True'})
+        },
         u'blog.post': {
             'Meta': {'ordering': "['-created']", 'object_name': 'Post'},
             'content': ('django.db.models.fields.TextField', [], {}),
