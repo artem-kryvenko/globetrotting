@@ -8,10 +8,15 @@
         <h1> {{post.title}} </h1>
         <p>Posted on {{post.created}}</p>
     </header>
-    <p class="description">
-        {{post.description}}
-    </p>
-    {{post.content|safe}}
+    <p class="description"> {{post.description}}</p>
+    {{ post.content|safe }}
+    <br/>
+    {% for photo in post_photos %}
+        <a href="{{ photo.image.url }}"><img src="{{ photo.thumb_url }}"></a>
+        {{ photo.title }}<br/>
+        {{ photo.caption }}
+        <hr/>
+    {% endfor %}
 </article>
 
 {% endblock %}
