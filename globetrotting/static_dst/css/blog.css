@@ -1,5 +1,18 @@
-.content{margin-top: 5em}
-.debug-red{background: red}
-.debug-blue{background: blue}
+body {
+    background: url('../images/bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-width: 900px;
+    margin: 0 auto;
+    color:#dcdcdc;
+   }
 
-table.oneline td {line-height: 30px;}
+.post{
+    margin: 0 auto;
+    /*vertical-align: top;*/
+}
+
+
+

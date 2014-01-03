@@ -4,13 +4,26 @@
 {% block title %} Home {% endblock %}
 
 {% block content %}
-    <h1> Welcome! </h1>
-    {% for post in posts %}
-    <div class="post">
-        <h2><a href="{% url 'blog:detail' post.id %}">{{post.title}}</a></h2>
-        <p>{{post.description}}</p>
-        <p>Posted on {{post.created}}</p>
+{#    <h1> Welcome! </h1>#}
+
+{% for post in posts %}
+<div class="post">
+  <div class="row">
+    <div class="col-md-5">
+        <img src="{{ post.photo_set.all.0.image.url }}" width="200">
     </div>
-    {% endfor %}
+    <div class="col-md-7">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description }}</p>
+        <br/>
+        <a href="{% url 'blog:detail' post.id %}">Read more...</a>
+        <br/>
+        <p>Posted {{ post.created }}</p>
+    </div>
+  </div>
+</div>
+<hr>
+{% endfor %}
+
 {% endblock %}
 
