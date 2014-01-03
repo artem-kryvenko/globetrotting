@@ -43,7 +43,7 @@ class Photo(models.Model):
 	caption = models.CharField(max_length=100, blank=True)
 
 	class Meta:
-		ordering = ['-id']
+		ordering = ['id']
 		# verbose_name = ('Photo')
 		# verbose_name_plural = ('Photos')
 
