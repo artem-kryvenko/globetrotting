@@ -1,5 +1,7 @@
 *.pyc
 *.db
-.idea/*
+.idea/
 settings_local.py
 cover/
+media/
+static_dst/
