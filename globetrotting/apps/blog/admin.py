@@ -27,5 +27,6 @@ class PhotoAdmin(admin.ModelAdmin):
 	actions = ['full_delete_selected']
 	list_display = ('title', 'caption', 'get_thumb_html')
 
+
 admin.site.register(Post, PostAdmin)
 admin.site.register(Photo, PhotoAdmin)
