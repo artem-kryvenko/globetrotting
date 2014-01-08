@@ -39,23 +39,28 @@
     </div>
 </div>
 
-
 <header>
     <h1> {{post.title}} </h1>
     <p class="description"> {{post.description}}</p>
     {{ post.content|safe }}
     <br/>
 </header>
+<br/>
 
 <div id="links">
     {% for photo in post_photos %}
         <a href="{{ photo.image.url }}" title={{ photo.title }} data-gallery>
-            <img src="{{ photo.thumb_url }}" alt="">
+            <img src="{{ photo.thumb_url }}"  width="100" height="75"  alt="">
         </a>
     {% endfor %}
 </div>
 
-<p> Posted on {{post.created}}</p>
+<p>Опубликовано {{ post.created|date:"SHORT_DATE_FORMAT" }}</p>
+<p>
+    {% load disqus_tags %}
+{#    {% disqus_dev %}#}
+    {% disqus_show_comments %}
+</p>
 
 <script>
 document.getElementById('links').onclick = function (event) {
