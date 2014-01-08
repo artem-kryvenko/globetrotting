@@ -46,11 +46,11 @@
     {{ post.content|safe }}
     <br/>
 </header>
-
+<br/>
 <div id="links">
     {% for photo in post_photos %}
         <a href="{{ photo.image.url }}" title={{ photo.title }} data-gallery>
-            <img src="{{ photo.thumb_url }}" alt="">
+            <img src="{{ photo.thumb_url }}"  width="100" height="75"  alt="">
         </a>
     {% endfor %}
 </div>
