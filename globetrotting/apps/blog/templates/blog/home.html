@@ -16,9 +16,9 @@
         <h3>{{ post.title }}</h3>
         <p>{{ post.description }}</p>
         <br/>
-        <a href="{% url 'blog:detail' post.id %}">Read more...</a>
+        <a href="{% url 'blog:detail' post.id %}">Подробнее >></a>
         <br/>
-        <p>Posted {{ post.created }}</p>
+        <p>Опубликовано {{ post.created|date:"SHORT_DATE_FORMAT" }}</p>
     </div>
   </div>
 </div>

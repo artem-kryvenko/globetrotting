@@ -55,7 +55,7 @@
     {% endfor %}
 </div>
 
-<p> Posted on {{post.created}}</p>
+ <p>Опубликовано {{ post.created|date:"SHORT_DATE_FORMAT" }}</p>
 
 <p>
     {% load disqus_tags %}
