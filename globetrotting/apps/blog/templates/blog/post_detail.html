@@ -57,6 +57,12 @@
 
 <p> Posted on {{post.created}}</p>
 
+<p>
+    {% load disqus_tags %}
+{#    {% disqus_dev %}#}
+    {% disqus_show_comments %}
+</p>
+
 <script>
 document.getElementById('links').onclick = function (event) {
     event = event || window.event;
