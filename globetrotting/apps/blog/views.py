@@ -18,7 +18,6 @@ def post_detail(request, post_id):
 	return render(request, 'blog/post_detail.html', data)
 
 
-
 def archive(request):
 	posts = Post.objects.filter(published=True)
 	data = {'posts': posts}
