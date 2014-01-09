@@ -1,0 +1,128 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{#    <meta name="description" content="">#}
+{#    <meta name="author" content="">#}
+{#    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">#}
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <link href="{% static 'dist/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+    <link href="{% static 'dist/css/blueimp-gallery.min.css' %}" rel="stylesheet" >
+
+</head>
+<body>
+  <div class="row">
+
+    <!-- Carousel
+================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="{% static "images/cbr1100xx.jpg" %}" width="400" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+{# <h1>Example headline.</h1>#}
+{# <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>#}
+{# <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>#}
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="{% static "images/varadero.jpg" %}" width="400" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+{# <h1>Another example headline.</h1>#}
+{# <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>#}
+{# <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>#}
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="{% static "images/midnight.jpg" %}" width="400" alt="Third slide" >
+          <div class="container">
+            <div class="carousel-caption">
+{# <h1>One more for good measure.</h1>#}
+{# <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>#}
+{# <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>#}
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+    <!-- /.carousel -->
+
+    {# navigation panel#}
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'blog:home' %}">Globetrotting</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="{% url 'blog:archive' %}">Archive</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      {% block content %}{% endblock %}
+    </div>
+
+    <div class="col-md-4">
+      <ul>
+        Something:
+        <li>asd</li>
+        <li>asdasd</li>
+        <li>as</li>
+        <li>d</li>
+        <hr>
+        <h4>Интересные ссылки:</h4>
+        <center>
+          <a href="http://moto.kiev.ua/forum/title/"><img src="{% static "images/moto_kiev_ua.gif" %}" width="80"></a>
+          <a href="http://moto-help.livejournal.com/"><img src="{% static "images/motohelp.png" %}" width="80"></a><br/><br/>
+          <a href="http://motosvit.com/"><img src="{% static "images/motosvit.jpg" %}"  width="80" height="65"></a>
+          <a href="http://bikepost.ru/"><img src="{% static "images/bikepost.jpg" %}" width="80" height="65"></a><br/><br/>
+          <a href="http://www.motosale.com.ua/"><img src="{% static "images/motosale.jpg" %}" height="70"></a><br/><br/>
+          <a href="http://www.motobike.ua/"><img src="{% static "images/motobike.gif" %}" width="245"></a><br/><br/>
+        </center>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<!-- Bootstrap core JavaScript
+<!-- Placed at the end of the document so the pages load faster -->
+
+{#<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>#}
+<script src="{% static "dist/js/jquery-1.10.2.js" %}"></script>
+<script src="{% static "dist/js/bootstrap.min.js" %}"></script>
+<script src="{% static 'dist/js/blueimp-gallery.min.js' %}"></script>
