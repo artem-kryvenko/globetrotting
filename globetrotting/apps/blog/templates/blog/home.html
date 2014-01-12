@@ -7,22 +7,11 @@
 {#    <h1> Welcome! </h1>#}
 
 {% for post in posts %}
-<div class="post">
-  <div class="row">
-    <div class="col-md-5">
-      <img src="{{ post.photo_set.all.0.image.url }}" width="200" height="150">
-    </div>
-    <div class="col-md-7">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.description }}</p>
-        <br/>
-        <a href="{% url 'blog:detail' post.id %}">Подробнее >></a>
-        <br/>
-        <p>Опубликовано {{ post.created|date:"SHORT_DATE_FORMAT" }}</p>
-    </div>
-  </div>
-</div>
-<hr>
+    <h3>{{ post.title }}</h3>
+    Маршрут: {{ post.description }}<br/>
+    <a href="{% url 'blog:detail' post.id %}">Подробнее <span class="glyphicon glyphicon-share-alt"></span></a>
+    <img src="{{ post.photo_set.all.0.image.url }}" width="600" height="300">
+    <hr>
 {% endfor %}
 
 {% endblock %}

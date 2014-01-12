@@ -6854,7 +6854,6 @@ button.close {
   margin-left: -30%;
   text-align: center;
   list-style: none;
-
 }
 
 .carousel-indicators li {
@@ -6868,7 +6867,6 @@ button.close {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #ffffff;
   border-radius: 10px;
-
 }
 
 .carousel-indicators .active {
