@@ -7,10 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Globetrotting">
-{#    <meta name="author" content="">#}
     <link rel="shortcut icon" href="{% static "images/favicon.png" %}">
 
-    <title>{% block title %}{% endblock %}</title>
+    <title>Globetrotting : {% block title %}{% endblock %}</title>
 
     <link href="{% static 'dist/css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'dist/css/blueimp-gallery.min.css' %}" rel="stylesheet">
@@ -23,7 +22,7 @@
 <div class="raw" >
 
     <!-- Carousel
-================================================== -->
+    ============================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -74,7 +73,7 @@
     </div>
 
     {# years panel#}
-    <div class="panel-group" id="accordion">
+    <div class="panel-group" id="accordion" >
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
@@ -85,7 +84,7 @@
         </div>
         <div id="collapseOne" class="panel-collapse collapse in">
           <div class="panel-body well">
-             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmo
+             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
           </div>
         </div>
       </div>
@@ -99,7 +98,7 @@
         </div>
         <div id="collapseTwo" class="panel-collapse collapse">
           <div class="panel-body well">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
           </div>
         </div>
       </div>
@@ -113,14 +112,13 @@
         </div>
         <div id="collapseThree" class="panel-collapse collapse">
           <div class="panel-body well">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
           </div>
         </div>
       </div>
     </div>
 
     <hr>
-    {# <h4>Интересные ссылки:</h4>#}
     <center>
       <a href="http://moto.kiev.ua/forum/title/"><img src="{% static "images/moto_kiev_ua.gif" %}" width="80"></a>
       <a href="http://moto-help.livejournal.com/"><img src="{% static "images/motohelp.png" %}" width="80"></a><br/><br/>
@@ -137,7 +135,6 @@
 
 <!-- Bootstrap core JavaScript
 <!-- Placed at the end of the document so the pages load faster -->
-
 <script src="{% static "dist/js/jquery-1.10.2.js" %}"></script>
 <script src="{% static "dist/js/bootstrap.min.js" %}"></script>
 <script src="{% static 'dist/js/blueimp-gallery.min.js' %}"></script>
